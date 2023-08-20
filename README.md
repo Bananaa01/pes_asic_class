@@ -101,6 +101,8 @@ Contents of the register are shown as in the image
 * Range of signed numbes : Positive : [0 , 2^(n-1)-1]
                          Negative : [-1 to 2^(n-1)]
 
+Unsigned 64-Bit number:
+
 ```
 #include <stdio.h>
 #include <math.h>
@@ -114,6 +116,64 @@ int main(){
 }
 ```
 
+Output:
+
+***IMAGE***
+
+Signed 64-Bit Number
+
+```
+#include <stdio.h>
+#include <math.h>
+
+int main(){
+	long long int max = (long long int) (pow(2,63) -1);
+	long long int min = (long long int) (pow(2,63) *(-1));
+	printf("lowest number represented by signed 64-bit integer is %lld\n",min);
+	printf("highest number represented by signed 64-bit integer is %lld\n",max);
+	return 0;
+}
+```
+Output:
+***IMAGE***
+</details>
+
+## DAY 2
+<details>
+	<summary> Day 2 Lab Work</summary>
+ ### Lab work using ABI Function calls
+
+Code:
+``` c
+ #include <stdio.h>
+  
+  extern int load(int x, int y);
+  
+  int main()
+  {
+    int result = 0;
+    int count = 9;
+    result = load(0x0, count+1);
+    printf("Sum of numbers from 1 to 9 is %d\n", result);
+  }
+```
+Compiled assembly file:
+
+``` s
+.section .text
+.global load
+.type load, @function
+load:
+add a4, a0, zero
+add a2, a0, a1
+add a3, a0, zero
+loop:
+add a4, a3, a4
+addi a3, a3, 1
+blt a3, a2, loop
+add a0, a4, zero
+ret
+```
 
 
 </details>
