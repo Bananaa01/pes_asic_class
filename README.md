@@ -5,17 +5,27 @@
 The objective of VLSI physical design for ASICs is to convert a logical RTL design into a physical layout suitable for fabrication. This process ensures the circuit's functionality aligns with design constraints, performance goals, and manufacturing standards.
 
 ## Table of Contents
-
-### DAY 1
+#### 1) Installation Instructions
+#### 2) DAY 1
 
 **Introduction to RISCV ISA and GNU Compiler Toolchain**
 + Introduction to Basic Keywords
 + Labwork for RISCV Toolchain
 + Integer Number Representation
 
-### DAY 2
+#### 3) DAY 2
 + Application Binary Interface
 + Labwork using ABI Function Calls
+
+## Installation Instructions (MacOS with ARM Processors)
+
+```
+brew tap riscv-software-src/riscv
+brew install riscv-tools
+```
+The second command will take about 1 Hr to complete (Depending on your network speed), and may appear stuck. The installer will work, please have patience. 
+
+<br>
 
 ## DAY 1 
 <details>
@@ -74,7 +84,7 @@ With -O1 optimization:
 
 <img width="1680" alt="image" src="https://github.com/TejasKaranji/pes_asic_class/assets/36126927/bb2d103a-f1c6-4dd9-a21e-62e7496f0c4d">
 
-With -Ofast optimization:
+<br>With -Ofast optimization:
 
 <img width="1680" alt="image" src="https://github.com/TejasKaranji/pes_asic_class/assets/36126927/4d68b415-dda1-4ca1-82d9-3dae7a16245f">
 
@@ -90,7 +100,7 @@ To Debug:
 ```
 spike -d pk p1.c
 ```
-Press `ENTER` to show registers line by line
+Press `ENTER` to show registers line by line<br>
 Press `q` to exit the debugger
 
 
