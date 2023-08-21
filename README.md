@@ -52,16 +52,18 @@ To compile for RISC-V
 ```
 riscv64-unknown-elf-gcc -O1 -mabi=lp64 -march=rv64i -o p1.o p1.c
 ```
+<img width="1680" alt="image" src="https://github.com/TejasKaranji/pes_asic_class/assets/36126927/9729e14c-9fda-409f-b08a-ead86eecdf0b">
+
 using ```ls``` to check that the compiled file exists:
 
-***IMAGE***
+<img width="369" alt="image" src="https://github.com/TejasKaranji/pes_asic_class/assets/36126927/69825fac-8576-4b6b-9f1c-40e121d9d3ff">
 
 To execute compiled code:
 ```
 spike pk sum1ton.o
 ```
 
-***IMAGE***
+<img width="350" alt="image" src="https://github.com/TejasKaranji/pes_asic_class/assets/36126927/74215dc4-9df0-44d6-9f42-99318aca7b42">
 
 To show assembly code:
 ```
