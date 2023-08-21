@@ -153,7 +153,7 @@ Output:
 ## DAY 2
 <details>
 	<summary> Day 2 Lab Work</summary>
- ### Lab work using ABI Function calls
+ ***Lab work using ABI Function calls***
 
 Code:
 ``` c
