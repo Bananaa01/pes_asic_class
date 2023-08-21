@@ -60,31 +60,31 @@ using ```ls``` to check that the compiled file exists:
 
 To execute compiled code:
 ```
-spike pk sum1ton.o
+spike pk p1.o
 ```
 
 <img width="350" alt="image" src="https://github.com/TejasKaranji/pes_asic_class/assets/36126927/74215dc4-9df0-44d6-9f42-99318aca7b42">
 
 To show assembly code:
 ```
-riscv64-unknown-elf-objdump -d sumton.o | less
+riscv64-unknown-elf-objdump -d p1.o | less
 ```
 
 With -O1 optimization:
 
-***IMAGE***
+<img width="1680" alt="image" src="https://github.com/TejasKaranji/pes_asic_class/assets/36126927/bb2d103a-f1c6-4dd9-a21e-62e7496f0c4d">
 
-With -OFast optimization:
+With -Ofast optimization:
 
-***IMAGE***
+<img width="1680" alt="image" src="https://github.com/TejasKaranji/pes_asic_class/assets/36126927/4d68b415-dda1-4ca1-82d9-3dae7a16245f">
 
 ***Using Spike to simulate and debug:***
 
 To simulate:
 ```
-spike -d pk p1.c
+spike pk p1.c
 ```
-***IMAGE***
+ <img width="352" alt="image" src="https://github.com/TejasKaranji/pes_asic_class/assets/36126927/aa7a9e66-5b41-4378-b26f-2dec22fdc223">
 
 To Debug: 
 ```
@@ -95,7 +95,7 @@ Press `q` to exit the debugger
 
 
 Contents of the register are shown as in the image
-***IMAGE***
+<img width="1680" alt="image" src="https://github.com/TejasKaranji/pes_asic_class/assets/36126927/a9712785-91ea-4692-8703-a1804c1c69a3">
 
 ### Integer number representation
 
@@ -120,7 +120,7 @@ int main(){
 
 Output:
 
-***IMAGE***
+<img width="1680" alt="image" src="https://github.com/TejasKaranji/pes_asic_class/assets/36126927/af294f51-d737-48a6-8134-9ecba09d5dd7">
 
 Signed 64-Bit Number
 
@@ -137,7 +137,7 @@ int main(){
 }
 ```
 Output:
-***IMAGE***
+<img width="1680" alt="image" src="https://github.com/TejasKaranji/pes_asic_class/assets/36126927/a885d455-bba9-410e-a43d-bbf90386e8f8">
 </details>
 
 ## DAY 2
