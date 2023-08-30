@@ -153,7 +153,11 @@ Output:
 ## DAY 2
 <details>
 	<summary> Day 2 Lab Work</summary>
- ***Lab work using ABI Function calls***
+
+ - ABI names for registers serve as a standardized way to designate the purpose and usage of specific registers within a software ecosystem. These names play a critical role in maintaining compatibility, optimizing code generation, and facilitating communication between different software components.
+
+
+ *** Lab work using ABI Function calls ***
 
 Code:
 ``` c
@@ -186,6 +190,66 @@ blt a3, a2, loop
 add a0, a4, zero
 ret
 ```
+## BASICS :
 
+Instructions that act on signed or unsigned integers are called Base Integer Instructions
+There are 47 Base Integer Instructions present in RISC-V ISA
+
+### Types of Instruction based on encoding format
+
+1. **R-Type (Register-Type):**
+   - These instructions operate on registers and have a fixed format for their operands.
+   - Examples: ADD, SUB, AND, OR, XOR, SLL, SRL, SRA, SLT, SLTU
+
+2. **I-Type (Immediate-Type):**
+   - These instructions have an immediate operand and one register operand.
+   - Examples: ADDI, SLTI, SLTIU, XORI, ORI, ANDI, SLLI, SRLI, SRAI, LB, LH, LW, LBU, LHU, JALR
+
+3. **S-Type (Store-Type):**
+   - These instructions are used for storing values from registers to memory.
+   - Examples: SB, SH, SW
+
+4. **B-Type (Branch-Type):**
+   - These instructions perform conditional branching based on comparisons.
+   - Examples: BEQ, BNE, BLT, BGE, BLTU, BGEU
+
+5. **U-Type (Upper Immediate-Type):**
+   - These instructions have a larger immediate field for encoding larger constants.
+   - Examples: LUI, AUIPC
+
+6. **J-Type (Jump-Type):**
+   - These instructions are used for unconditional jumps and function calls.
+   - Examples: JAL
+
+## Labwork using ABI Function Calls
+
+### Algorithm for C Program using ASM
+- Incorporating assembly language code into a C program can be done using inline assembly or by linking separate assemblers from memory
+
+To store 64 bits of data from mem to reg, we use 8*8bit stores ie., m[0],m[1]......m[7].
+
+RISC-V uses Little Endian format to store the data ie., Least significant Byte is stored in m[0]
+
+Ibly files with your C code.
+- When you call an assembly function from your C code, the C calling convention is followed, including pushing arguments onto the stack or passing them in registers as required.
+- The program executes the assembly function, following the assembly instructions you've provided.
+
+![image](https://github.com/TejasKaranji/pes_asic_class/assets/36126927/b3c7de8a-bffe-4560-9d1e-00df5323dbbe)
+
+C Code is written seperately from assembly code. In the assermbly file, declare functions with signatures that match the calling conventions of the platform.
+</details>
+
+<details>
+	<summary> Day 3: Introduction to Verilog RTL Design and synthesis</summary>
+
+ ## Installation (For MacOS - ARM Processors)
+
+Installation of iVerilog and GTKWave can be done using MacPorts.
+
+1. Install the right version of MacPorts from macports.org (OS Specific)
+2. Once the tool is installed, open terminal and type `sudo port -v install iverilog`
+3. `brew tap homebrew/cask`
+4. `brew install gtkwave --cask`
+5. If the OS complains about the app being unverified when you try to run it, use the command: `open -a gtkwave xxxx.vcd`
 
 </details>
