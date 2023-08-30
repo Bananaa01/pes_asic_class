@@ -239,10 +239,11 @@ Ibly files with your C code.
 C Code is written seperately from assembly code. In the assermbly file, declare functions with signatures that match the calling conventions of the platform.
 </details>
 
+## Day 3
 <details>
 	<summary> Day 3: Introduction to Verilog RTL Design and synthesis</summary>
 
- ## Installation (For MacOS - ARM Processors)
+ ## Installation (MacOS with ARM Processors)
 
 Installation of iVerilog and GTKWave can be done using MacPorts.
 
@@ -251,5 +252,11 @@ Installation of iVerilog and GTKWave can be done using MacPorts.
 3. `brew tap homebrew/cask`
 4. `brew install gtkwave --cask`
 5. If the OS complains about the app being unverified when you try to run it, use the command: `open -a gtkwave xxxx.vcd`
+
+## Labs:
+** Simulation
+1. Clone the Repo <break> `git clone https://github.com/kunalg123/sky130RTLDesignAndSynthesisWorkshop.git`
+2. cd into the cloned repo <break> `cd sky130RTLDesignAndSynthesisWorkshop/verilog_files`
+3.  
 
 </details>
