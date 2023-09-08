@@ -253,10 +253,44 @@ Installation of iVerilog and GTKWave can be done using MacPorts.
 4. `brew install gtkwave --cask`
 5. If the OS complains about the app being unverified when you try to run it, use the command: `open -a gtkwave xxxx.vcd`
 
-## Labs:
-** Simulation
+## Simulation using iverilog
 1. Clone the Repo <break> `git clone https://github.com/kunalg123/sky130RTLDesignAndSynthesisWorkshop.git`
 2. cd into the cloned repo <break> `cd sky130RTLDesignAndSynthesisWorkshop/verilog_files`
-3.  
+3. `iverilog good_mux.v tb_good_mux.v`
+4. `./a.out`
+5. `gtkwave tb_good_mux.vcd`
+   <img width="1680" alt="image" src="https://github.com/TejasKaranji/pes_asic_class/assets/36126927/7791b98a-38a2-4a13-be21-9a9e20613997">
+
+## Introduction to YOSYS Synthesizer 
+Synthesizer: Tool used for converting thr RTL to netlist. Here we are using synthesizer called yosys
+
+Netlist: Representation of design in the form of standard cells present in .lib
+.libcontains standard cells to implement any boolean logic functionality.
+
+<img width="592" alt="image" src="https://github.com/TejasKaranji/pes_asic_class/assets/36126927/06252d17-483f-4dc5-b445-0c7bfbdca8f4">
+
+### Introduction to Logic Synthesis:
+### RTL Design 
+RTL design is the behavioral representation of the required specifications
+RTL to gate level transition is called as synthesis. The design is converted into gates and connections are made between gates, and this is given out as a file called netlist.
+
+### Labs using YOSYS
+
+#### Installation  of Yosys:
+Install Yosys by using the precompiled binaries available at https://github.com/YosysHQ/oss-cad-suite-build#installation
+
+<img width="1680" alt="image" src="https://github.com/TejasKaranji/pes_asic_class/assets/36126927/a435d8ef-4b1c-454c-8bf8-8ea340e9d227">
+
+To read library files:
+`read_liberty -lib /path-to-file/library-name.lib`
+
+<img width="658" alt="image" src="https://github.com/TejasKaranji/pes_asic_class/assets/36126927/91a2385c-277c-427c-a3f2-26bdc3d14919">
+
+To read Verilog files:
+
+`read_verilog /path-to-file/verilog.v`
+
+<img width="1680" alt="image" src="https://github.com/TejasKaranji/pes_asic_class/assets/36126927/6ed1a79d-2756-47c6-a93a-04799a33e869">
+
 
 </details>
