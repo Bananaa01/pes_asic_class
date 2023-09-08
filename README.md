@@ -254,11 +254,18 @@ Installation of iVerilog and GTKWave can be done using MacPorts.
 5. If the OS complains about the app being unverified when you try to run it, use the command: `open -a gtkwave xxxx.vcd`
 
 ## Simulation using iverilog
-1. Clone the Repo <break> `git clone https://github.com/kunalg123/sky130RTLDesignAndSynthesisWorkshop.git`
-2. cd into the cloned repo <break> `cd sky130RTLDesignAndSynthesisWorkshop/verilog_files`
-3. `iverilog good_mux.v tb_good_mux.v`
-4. `./a.out`
-5. `gtkwave tb_good_mux.vcd`
+1. Clone the Repo 
+
+```git clone https://github.com/kunalg123/sky130RTLDesignAndSynthesisWorkshop.git```
+
+2. cd into the cloned repo <break>
+
+```cd sky130RTLDesignAndSynthesisWorkshop/verilog_files```
+
+3. ```iverilog good_mux.v tb_good_mux.v```
+4. ```./a.out```
+5. ```gtkwave tb_good_mux.vcd```
+   
    <img width="1680" alt="image" src="https://github.com/TejasKaranji/pes_asic_class/assets/36126927/7791b98a-38a2-4a13-be21-9a9e20613997">
 
 ## Introduction to YOSYS Synthesizer 
@@ -282,15 +289,37 @@ Install Yosys by using the precompiled binaries available at https://github.com/
 <img width="1680" alt="image" src="https://github.com/TejasKaranji/pes_asic_class/assets/36126927/a435d8ef-4b1c-454c-8bf8-8ea340e9d227">
 
 To read library files:
-`read_liberty -lib /path-to-file/library-name.lib`
+
+```read_liberty -lib /path-to-file/library-name.lib```
 
 <img width="658" alt="image" src="https://github.com/TejasKaranji/pes_asic_class/assets/36126927/91a2385c-277c-427c-a3f2-26bdc3d14919">
 
 To read Verilog files:
 
-`read_verilog /path-to-file/verilog.v`
+```read_verilog /path-to-file/verilog.v```
 
 <img width="1680" alt="image" src="https://github.com/TejasKaranji/pes_asic_class/assets/36126927/6ed1a79d-2756-47c6-a93a-04799a33e869">
+
+To synthesize the module:
+
+```synth -top good_mux```
+
+<img width="1680" alt="image" src="https://github.com/TejasKaranji/pes_asic_class/assets/36126927/999d2ebc-6b32-4fe5-8777-bd0c56041087">
+
+To generate netlist file based on the .liub file:
+
+```abc -liberty /path-to-lib.lib```
+
+<img width="1680" alt="image" src="https://github.com/TejasKaranji/pes_asic_class/assets/36126927/251013d8-6f3f-4181-a9a9-e4939366b675">
+
+To display the synthesized design, type `show`
+
+![image](https://github.com/TejasKaranji/pes_asic_class/assets/36126927/7be1965a-e613-479c-91d7-e9b0762dfeea)
+
+To check the netlist file:
+
+``` write_verilog good_mux_netlist.v ```
+
 
 
 </details>
