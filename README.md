@@ -319,7 +319,30 @@ To display the synthesized design, type `show`
 To check the netlist file:
 
 ``` write_verilog good_mux_netlist.v ```
+<img width="1680" alt="image" src="https://github.com/TejasKaranji/pes_asic_class/assets/36126927/17914bdf-4b32-4624-899d-ed79d3b1bd88">
 
+i0 and i1 are our primary inputs, sel is our select line and y is our output.
+
+</details>
+
+## Day 4
+<details>
+	<summary>Introduction to Timing Libs</summary>	
+
+* In the first line we can see the name sky130, which means this is the 130nm library
+"tt" means typical. There can be slow, fast and typical libraries
+* 025C is the temperature.
+* 1v8 is the voltage.
+When we look into a library the phrase PVT should be taken into account.
+* P is process.
+* V is voltage.
+* T is temperature.
+
+The main reason we look into these three parameters is because the circuit has to work under variations across all of them.
+Line 12 tells us that the technology used is the CMOS technology
+From lines 15 to 20 we can see the units used for each of the parameters, for example time is defined in nano seconds(ns).
+
+<img width="594" alt="image" src="https://github.com/TejasKaranji/pes_asic_class/assets/36126927/4874b30f-071b-4ff4-b34c-d6c18457b4b5">
 
 
 </details>
